@@ -1,0 +1,6 @@
+#
+####### requirements.txt #######
+####### Setup Flask ############
+#
+
+flask
