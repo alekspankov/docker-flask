@@ -3,4 +3,4 @@
 ####### Setup Flask ############
 #
 
-flask
+flask == 0.12
