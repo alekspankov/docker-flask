@@ -12,8 +12,8 @@ Author: Alexander Pankov <ap@wdevs.ru>
 Versions
 --------
 
-- Flask 0.12
-- Python 2.7
+- Flask 1.0.2
+- Python 3.7
 
 Run
 ---
@@ -36,12 +36,19 @@ Build
     cd docker-flask
     ```
     
-1. Edit **Dockerfile** according your needs.
+1. Edit **Dockerfile** according your needs. If you just want to change FLASK_ENV (see [here](http://flask.pocoo.org/docs/1.0/config/#environment-and-debug-features)) you can use `--build-arg environment=development` or `--build-arg environment=production`. Default environment is **`production`**.
 1. Run docker build command (don't omit dor at the end):
     ```
     docker build -t docker-flask .
     ```
+
+    or, to set the `development` environment:
     
+    ```
+    docker build --build-arg environment=development -t docker-flask .
+    ```
+
+    Please notice the dot in the end og command line.
 1. Use your new image:
     ```
     docker run -d --name some-flask -p 5000:5000 -v $(pwd):/usr/src/app docker-flask
