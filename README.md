@@ -9,6 +9,12 @@ Docker image for Flask ([Flask Homepage](http://flask.pocoo.org/)).
 
 Author: Alexander Pankov <ap@wdevs.ru>
 
+Versions
+--------
+
+- Flask 0.12
+- Python 2.7
+
 Run
 ---
 
